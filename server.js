@@ -28,8 +28,8 @@ var listener = app.listen(process.env.PORT, function () {
   console.log("Your app is listening on port " + listener.address().port);
 });
 
+let responseObject = {};
 app.get("/api/:input", (request, response) => {
-  let responseObject = {};
   let input = request.params.input;
 
   if (input.includes("-")) {
